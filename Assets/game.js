@@ -26,17 +26,18 @@ function getGuess () {
 
 
 // check myGuess
-function answerChecker (myGuess) {
+function answerChecker (myGuess, wins, secretLetter, guessesRemaining) {
     if (myGuess === secretLetter) {
         wins = wins++
         // testing
         console.log(myGuess);
+        console.log(wins)
     }
     if (myGuess !== secretLetter && guessesRemaining > 0) {
         getGuess()
         // testing
         console.log(myGuess);
-        guessesRemaining--
+        guessesRemaining -= 1;
         console.log(guessesRemaining);
     }
     //     if (myGuess !== secretLetter && guessesRemaining =0) {
