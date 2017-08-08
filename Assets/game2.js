@@ -39,7 +39,7 @@ function updateWins() {
 function updateLosses() {
     losses++;
     // for testing
-    log('losses: ', losses)
+    console.log('losses: ', losses)
 }
 
 function updateIncorrectGuesses() {
@@ -72,3 +72,11 @@ function checkAnswer() {
         resetVariables();
     }
 }
+
+function gamePlay() {
+    newSecretLetter();
+    getGuess();
+    checkAnswer();
+}
+
+gamePlay()
